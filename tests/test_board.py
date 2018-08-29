@@ -1,7 +1,7 @@
 import unittest
 from unittest import TestCase
 
-from board import Board
+from custo.board import Board
 
 
 class TestBoard(TestCase):
@@ -29,14 +29,14 @@ class TestBoard(TestCase):
         # Test that you can't insert something big. (max board size = 2050)
         b = Board(2050.)
 
-        with self.assertRaises(Exception):
+        with self.assertRaises(ValueError):
             b.insert(1000)
             b.insert(1000)
             b.insert(51)
 
         b2 = Board(2050.)
 
-        self.assertRaises(Exception, b2.insert, 2051)
+        self.assertRaises(ValueError, b2.insert, 2051)
 
         # Test space remaining works as planned
         c = Board(2050.)
