@@ -10,6 +10,7 @@ class Board(object):
         self.space_remaining = self.board_length
 
     def insert(self, piece_length):
+        """Add a item to the Board"""
         if self.space_remaining >= piece_length:
             self.items.append(piece_length)
             self.space_remaining -= piece_length
@@ -17,6 +18,7 @@ class Board(object):
             raise ValueError('piece of length too long to be inserted')
 
     def remove(self, piece_length):
+        """Remove an item from the Board"""
         if piece_length in self.items:
             self.items.remove(piece_length)
             self.space_remaining += piece_length
@@ -42,10 +44,12 @@ class BoardCollection(object):
 
     @property
     def num_boards(self):
+        """Returns the number of boards in a BoardCollection"""
         return len(self.contents)
 
     @property
     def last(self):
+        """Returns the last Board on a BoardCollection"""
         try:
             if self.contents[-1]:
                 return self.contents[-1]
@@ -53,6 +57,7 @@ class BoardCollection(object):
             return False
 
     def append(self, board):
+        """Adds a Board at the end of a BoardCollection"""
         if isinstance(board, Board):
             self.contents.append(board)
         else:

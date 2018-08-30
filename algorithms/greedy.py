@@ -1,8 +1,16 @@
-from custo.board import Board
 from custo import BoardCollection
+from custo.board import Board
 
 
 def greedy_algorithm(pieces, material_size):
+    """Implementation of the First-Fit Greedy Algorithm
+
+    Inputs:
+    pieces - list[] of items to place optimally
+    material_size - length of Boards to cut from, assumes unlimited supply
+
+    Output:
+    Optimally laid out BoardCollection.contents, which is a list[] of Boards"""
 
     bc = BoardCollection()
     bc.append(Board(material_size))
@@ -12,7 +20,7 @@ def greedy_algorithm(pieces, material_size):
     # we must copy pieces, else our actual list will get modified
     for piece in pieces.copy():
 
-        piece_added = False # for recording state: did we add this piece to BoardCollection yet?
+        piece_added = False  # for recording state: did we add this piece to BoardCollection yet?
 
         # if piece fits, add it on that Board, remove it from the list, mark it as such and break out of for loop
         for board in bc.contents:

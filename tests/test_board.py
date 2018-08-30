@@ -9,7 +9,7 @@ class TestBoard(TestCase):
     # test "insert" Class method
     def test_insert(self):
 
-        # Test for proper type o insert
+        # Test for proper type to insert
         a = Board(2050.)
 
         self.assertRaises(Exception, a.insert, 'car')  # assert string fails
@@ -27,20 +27,15 @@ class TestBoard(TestCase):
         self.assertIsNone(b.insert(1000))
         self.assertRaises(ValueError, b.insert, 51)
 
-
         b2 = Board(2050.)
-
         self.assertRaises(ValueError, b2.insert, 2051)
 
         # Test space remaining works as planned
         c = Board(2050.)
-
         c.insert(100)
 
         self.assertEqual(c.space_remaining, 1950)
-
         c.insert(850)
-
         self.assertEqual(c.space_remaining, 1100)
 
     # test "remove" Class method
@@ -95,6 +90,7 @@ class TestBoardCollection(TestCase):
         self.assertEquals(a.contents, [b1])
         a.append(b2)
         self.assertEquals(a.contents, [b1, b2])
+        self.assertRaises(TypeError, a.append, b3)
 
     def test_last(self):
         a = BoardCollection()
