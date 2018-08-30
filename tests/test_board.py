@@ -16,23 +16,17 @@ class TestBoard(TestCase):
 
         self.assertRaises(Exception, a.insert, [0, 1, 2])  # assert [] fails
 
-        try:
-            a.insert(100)    # assert int OK
-        except TypeError:
-            self.fail("insert() raised TypeError unexpectedly!")
+        self.assertTrue(a.insert, 100.0)
 
-        try:
-            a.insert(100.0)    # assert float OK
-        except TypeError:
-            self.fail("insert() raised TypeError unexpectedly!")
+        self.assertRaises(TypeError, a.insert, "banana")
 
         # Test that you can't insert something big. (max board size = 2050)
         b = Board(2050.)
 
-        with self.assertRaises(ValueError):
-            b.insert(1000)
-            b.insert(1000)
-            b.insert(51)
+        self.assertIsNone(b.insert(1000))  # default return type for Board.insert() is None
+        self.assertIsNone(b.insert(1000))
+        self.assertRaises(ValueError, b.insert, 51)
+
 
         b2 = Board(2050.)
 

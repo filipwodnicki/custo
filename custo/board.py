@@ -61,16 +61,3 @@ class BoardCollection(object):
 
 if __name__ == '__main__':
     pass
-    # a = Board(100)
-    # print(a)
-    # a.insert(50)
-    # print(a)
-    # a.insert(50)
-    # print(a)
-    # a.remove(50)
-    # print(a)
-    #
-    # b = BoardCollection()
-    # print(b)
-    # b.append(a)
-    # print(b)
