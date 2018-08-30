@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from custo.board import Board
-from custo.board import BoardCollection
+from custo import BoardCollection
 
 
 class TestBoardCollection(TestCase):
@@ -38,5 +38,16 @@ class TestBoardCollection(TestCase):
         a.append(b2)
         self.assertEquals(a.contents, [b1, b2])
 
-        self.assertRaises(TypeError, a.append, b3)
+    def test_last(self):
+        a = BoardCollection()
+        self.assertFalse(a.last)
 
+        b1 = Board(1000)
+        b1.insert(500)
+        a.append(b1)
+        self.assertEqual(a.last.items, [500])
+
+        b2 = Board(1000)
+        b2.insert(200)
+        a.append(b2)
+        self.assertEqual(a.last.items, [200])
