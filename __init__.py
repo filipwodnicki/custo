@@ -1,2 +1,2 @@
-from .custo.board import *
-from .algorithms.greedy import *
+from custo import *
+from algorithms import *
