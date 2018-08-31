@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="custo",
-    version="0.1.0",
+    version="0.1.1",
     url="https://github.com/filipwodnicki/custo",
     author="Filip Wodnicki",
     author_email="hello@filipwodnicki.com",
