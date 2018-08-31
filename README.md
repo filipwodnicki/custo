@@ -14,9 +14,12 @@ Code should be correct, readable, easy to use, and well-commented.
 Python 3.6
 ### Installation
 ```
-Clone package into your project directory.
+Clone repo into your project directory.
 ```
-
+or  
+```bash
+git install git+https://github.com/filipwodnicki/custo.git
+```
 ### Tests
 ```
 cd custo    
