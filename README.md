@@ -8,10 +8,9 @@ In short, the Cutting Stock Problem is a problem where we have material (like a 
 
 Code should be correct, readable, easy to use, and well-commented.  
   
----
 ## Getting Started
-### Prerequisites
-Python 3.6
+### Requirements
+Python 3.6  
 ### Installation
 ```
 Clone repo into your project directory.
@@ -20,6 +19,7 @@ or
 ```bash
 git install git+https://github.com/filipwodnicki/custo.git
 ```
+  
 ### Tests
 ```
 cd custo    
@@ -29,7 +29,9 @@ python -m unittest discover tests
 
 ## Algorithms
 
-### 1. First-fit Algorithm
+### 1. Greedy Algorithm
+```custo/greedy.py```  
+
 This is the first algorithm implemented, a "hello world" of sorts. The First-fit Algorithm is a type of greedy approximation algorithm. It's called ["greedy"](https://en.wikipedia.org/wiki/Greedy_algorithm) because it optimizes at each step of calculation without considering the solution as a whole. Furthermore, even as a greedy algorithm it's only an approximation of the optimal result. Namely, at each step it doesn't check which piece fits best, it's just first-come-first-served!
 
 Here's how it works:  
@@ -44,6 +46,10 @@ Here's how it works:
 Interestingly, Fit-first has been shown to always give results within 20-25% of the truly optimal solution.
   
 #### Example usage
+```python
+from custo import greedy_algorithm
+greedy_algorithm([450, 444, 436, 430, 389, 389, 386, 375, 362, 362, 261, 261, 261], 2050.)
+```  
   
 ![Greedy Algorithm Example](example_greedy.png)  
 
@@ -53,11 +59,8 @@ Please email author if interested.
 
 ## Changelog
 
-#### v0.1.1
-31.08.2018, Fix known bugs with import
-
-#### v0.1.0
-31.08.2018, Implemented Greedy Algorithm with tests  
+__v0.1.1__ 01.09.2018, Fix known bugs with import  
+__v0.1.0__, 31.08.2018, Implemented Greedy Algorithm with tests  
 
 ## Acknowledgements
 
