@@ -18,7 +18,11 @@ Clone package into your project directory.
 ```
 
 ### Tests
-
+```
+cd custo    
+  
+python -m unittest discover tests
+```
 
 ## Algorithms
 

@@ -1,3 +1,4 @@
+import unittest
 from unittest import TestCase
 
 from algorithms.greedy import greedy_algorithm
@@ -38,3 +39,6 @@ class TestGreedyAlgorithm(TestCase):
         self.assertEqual(result_board_2_space, expected_board_2_space)
         self.assertEqual(result_board_3_items, expected_board_3_items)
         self.assertEqual(result_board_3_space, expected_board_3_space)
+
+if __name__ == '__main__':
+    unittest.main()
