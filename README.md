@@ -38,8 +38,8 @@ Interestingly, Fit-first has been shown to always give results within 20-25% of 
   
 #### Example usage
   
-![Greedy Algorithm Example](example_greedy.png)
-Sample code  
+![Greedy Algorithm Example](example_greedy.png)  
+
 
 ## Contributing
 Please email author if interested.
