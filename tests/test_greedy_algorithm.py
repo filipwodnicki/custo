@@ -1,8 +1,8 @@
 import unittest
 from unittest import TestCase
 
-from algorithms.greedy import greedy_algorithm
 from custo import Board
+from custo import greedy_algorithm
 
 
 class TestGreedyAlgorithm(TestCase):
