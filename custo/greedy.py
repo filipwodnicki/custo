@@ -1,4 +1,4 @@
-from board import Board, BoardCollection
+from custo.board import Board, BoardCollection
 
 
 def greedy_algorithm(pieces, material_size):
