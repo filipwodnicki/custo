@@ -59,8 +59,8 @@ Please email author if interested.
 
 ## Changelog
 
-__v0.1.1__ 01.09.2018, Fix known bugs with import  
-__v0.1.0__, 31.08.2018, Implemented Greedy Algorithm with tests  
+__v0.1.1__ (01-09-2018) Fix known bugs with import  
+__v0.1.0__ (31-08-2018) Project launch. Implement Greedy Algorithm with tests  
 
 ## Acknowledgements
 
